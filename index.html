@@ -80,7 +80,7 @@ h3{font-weight:700}
 .en{font-family:var(--sans);font-weight:500;letter-spacing:.02em;text-transform:uppercase}
 
 /* ---------- header ---------- */
-header{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(46,43,49,.94);backdrop-filter:blur(6px);color:var(--white)}
+header{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(46,43,49,.96);color:var(--white)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 var(--gutter);max-width:1440px;margin:0 auto}
 .logo{font-family:var(--serif);font-size:26px;font-weight:600;letter-spacing:.1em;line-height:1.2}
 .logo small{display:block;font-family:var(--sans);font-size:14px;font-weight:400;letter-spacing:.02em;color:var(--on-dark-sub);margin-top:4px}
@@ -111,7 +111,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 }
 
 /* ---------- 縦の予約ボタン ---------- */
-.side-cta{position:fixed;right:16px;bottom:32px;z-index:55;writing-mode:vertical-rl;letter-spacing:.1em;font-size:16px;font-weight:500;color:var(--white);border:1px solid var(--line-dark);background:rgba(46,43,49,.85);backdrop-filter:blur(4px);padding:24px 14px 20px;transition:background .3s,color .3s}
+.side-cta{position:fixed;right:16px;bottom:32px;z-index:55;writing-mode:vertical-rl;letter-spacing:.1em;font-size:16px;font-weight:500;color:var(--white);border:1px solid var(--line-dark);background:rgba(46,43,49,.9);padding:24px 14px 20px;transition:background .3s,color .3s}
 .side-cta::before{content:"";display:block;width:1px;height:28px;background:currentColor;margin:0 auto 12px}
 .side-cta:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
 @media(max-width:767px){
@@ -126,7 +126,7 @@ nav a:hover::after,nav a:focus-visible::after{width:100%}
 .hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,43,49,.5) 0%,rgba(46,43,49,.22) 45%,rgba(46,43,49,.78) 100%)}
 .hero-copy{position:absolute;left:0;right:0;bottom:10vh;z-index:2}
 .hero-copy .en{font-size:16px;letter-spacing:.06em;color:var(--on-dark-sub);margin-bottom:var(--s3)}
-.hero-copy h1{font-size:var(--fs-display);line-height:1.5;letter-spacing:.02em;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.hero-copy h1{font-size:var(--fs-display);line-height:1.5;letter-spacing:.02em}
 .scroll-sign{position:absolute;left:var(--gutter);bottom:0;z-index:2;writing-mode:vertical-rl;font-size:14px;letter-spacing:.1em;color:var(--on-dark-sub);padding-bottom:72px}
 .scroll-sign::after{content:"";position:absolute;left:50%;bottom:0;width:1px;height:56px;background:linear-gradient(180deg,#CFCACF,transparent);animation:drop 2.2s ease-in-out infinite}
 @keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
@@ -150,7 +150,7 @@ section{padding:var(--s12) 0;scroll-margin-top:80px}
 
 /* ---------- about（暗幕＋固定背景） ---------- */
 .dark-fixed{position:relative;color:var(--white);background:var(--ink-deep);padding:var(--s12) 0}
-.dark-fixed .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;background-attachment:fixed;opacity:.28;filter:grayscale(.6)}
+.dark-fixed .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.28;filter:grayscale(.6)}
 .dark-fixed .inner{position:relative;z-index:2}
 .dark-fixed .sec-head .en{color:var(--on-dark-sub)}
 .dark-fixed .sec-head{margin-bottom:var(--s4)}
@@ -159,7 +159,7 @@ section{padding:var(--s12) 0;scroll-margin-top:80px}
 
 /* ---------- 想い（番号付きパネル） ---------- */
 .panel{position:relative;min-height:70vh;display:flex;align-items:center;color:var(--white);overflow:hidden;background:var(--ink-deep);padding:var(--s10) 0}
-.panel .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;background-attachment:fixed;opacity:.4;filter:grayscale(.55)}
+.panel .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.4;filter:grayscale(.55)}
 .panel::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,43,49,.8),rgba(46,43,49,.4))}
 .panel .inner{position:relative;z-index:2;width:100%}
 .panel .no{font-family:var(--serif);font-size:clamp(64px,10vw,112px);font-weight:400;color:rgba(255,255,255,.28);line-height:1;letter-spacing:0}
@@ -371,7 +371,7 @@ details .a{padding:0 4px var(--s3) 0;font-size:var(--fs-body);color:var(--sub);l
 
 /* ---------- contact ---------- */
 .contact{position:relative;color:var(--white);background:var(--ink-deep);text-align:center;padding:var(--s12) 0}
-.contact .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;background-attachment:fixed;opacity:.25;filter:grayscale(.6)}
+.contact .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.25;filter:grayscale(.6)}
 .contact .inner{position:relative;z-index:2}
 .contact .en{display:block;font-size:16px;color:var(--on-dark-sub);margin-bottom:var(--s1)}
 .contact h2{font-size:var(--fs-h2);letter-spacing:.01em;line-height:1.5}
