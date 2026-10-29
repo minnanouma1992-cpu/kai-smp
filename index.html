@@ -298,6 +298,12 @@ section{padding:var(--s12) 0;scroll-margin-top:80px}
 .ba{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-soft)}
 .shot{position:relative;background:#fff}
 .shot img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.movie{max-width:800px;margin:var(--s4) auto 0;background:var(--white);border:1px solid var(--line)}
+.movie video{width:100%;display:block;aspect-ratio:16/9;background:#000}
+.movie .mbody{padding:var(--s3) var(--s4)}
+.movie h3{font-size:var(--fs-h3);letter-spacing:.02em;line-height:1.4}
+.movie p{font-size:var(--fs-body);color:var(--sub);margin-top:var(--s1);line-height:1.7}
+@media(max-width:767px){.movie .mbody{padding:var(--s3) var(--s2)}}
 .cases{max-width:800px;margin:0 auto;display:flex;align-items:flex-start;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px 0}
 .cases::-webkit-scrollbar{display:none}
 .cases .case{flex:0 0 100%;max-width:none;margin:0;scroll-snap-align:center;scroll-snap-stop:always}
@@ -770,6 +776,13 @@ html.js .reveal.in{opacity:1;transform:none}
     </div>
     <div class="cases-nav" aria-label="症例の切り替え"><button type="button" class="cases-prev" aria-label="前の症例">‹</button><div class="cases-dots" aria-hidden="true"></div><button type="button" class="cases-next" aria-label="次の症例">›</button></div>
     <span class="cases-hint">← 横にスワイプして他の症例を見る →</span>
+    <div class="movie">
+      <video src="reel.mp4" poster="reel_poster.jpg" controls playsinline preload="metadata"></video>
+      <div class="mbody">
+        <h3>施術の様子</h3>
+        <p>実際の施術風景です（約15秒）。医療機関内の完全個室で、頭皮の状態と毛流れを確認しながら、一点ずつ色素を入れていきます。</p>
+      </div>
+    </div>
     <p class="sec-fine">※ 掲載はご本人の同意を得たモニター症例です。効果・持続には個人差があり、結果を保証するものではありません。</p>
   </div>
 </section>
@@ -1009,7 +1022,7 @@ document.querySelectorAll('#gnav a').forEach(function(a){
 (function(){
   document.documentElement.classList.add('js');
 
-  var sel = '.sec-head,.col-card,.worries li,.after-note,.diff-text,.diff-img,.plan,.round,.rounds-note,.case,.step,.faq-list details,.profile,.acc,.charity h2,.charity p,.contact h2,.contact .lead,.btns,.qr,.sns,.panel .inner,.dark-fixed .inner,.panels-title,.menu-fine,.sec-fine';
+  var sel = '.sec-head,.col-card,.worries li,.after-note,.diff-text,.diff-img,.plan,.round,.rounds-note,.case,.movie,.step,.faq-list details,.profile,.acc,.charity h2,.charity p,.contact h2,.contact .lead,.btns,.qr,.sns,.panel .inner,.dark-fixed .inner,.panels-title,.menu-fine,.sec-fine';
   var els = document.querySelectorAll(sel);
   var io = new IntersectionObserver(function(es){
     es.forEach(function(e){
